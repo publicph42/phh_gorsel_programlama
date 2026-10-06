@@ -8,6 +8,8 @@ bool isPlayerTurn = true;
 Random randomMaker = new Random();
 
 Character player;
+int turnNumber = 0;
+
 
 
 void SetupGame()
@@ -56,15 +58,16 @@ while (isRunning)
         switch (userAction)
         {
             case 1:
-                AttackSelector();
+                PlayerAttackAction();
                 break;
             case 2:
                 player.LevelUpAttack();
                 break;
             case 3:
-                player.name = "tktjtlk";
+                player.Defend();
                 break;
         }
+        turnNumber++;
     }
     else
     {
@@ -72,11 +75,10 @@ while (isRunning)
     }
 
 
-    string userInput = Console.ReadLine();
+    //string userInput = Console.ReadLine();
 }
 
-void PlayerTurn()
+void PlayerAttackAction()
 {
-    isRunning = false;
-
+    Console.WriteLine("PlayerAttackAction Called");
 }

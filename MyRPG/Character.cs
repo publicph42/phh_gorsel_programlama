@@ -21,5 +21,15 @@ namespace MyRPG
             }
         }
 
+        public void LevelUpAttack()
+        {
+            Console.WriteLine("LevelUpAttack() Called");
+        }
+        
+        public void Defend()
+        {
+            Console.WriteLine("Defend() Called");
+        }
+
     }
 }
